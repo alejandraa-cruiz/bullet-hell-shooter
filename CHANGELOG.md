@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - UNRELEASED
 
 ### Added
+- Scene Setup commit (15/11/2023)
+- TimeManager and TimeUI added (15/11/2023)
+- Monster transform position from side to side (15/11/2023)
 
 ### Changed
 
