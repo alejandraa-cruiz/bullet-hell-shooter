@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Vector2 movementDirection;
+    private Vector3 movementDirection;
     private float movementSpeed;
     public float bulletLifetime = 1.5f;
 
@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        movementSpeed = 7f;
+        movementSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -29,6 +29,10 @@ public class Bullet : MonoBehaviour
         movementDirection = dir;
     }
 
+    public void SetMovementSpeed(float speed)
+    {
+        movementSpeed = speed;
+    }
     private IEnumerator DestroyAfterTime()
     {
         yield return new WaitForSeconds(bulletLifetime);
