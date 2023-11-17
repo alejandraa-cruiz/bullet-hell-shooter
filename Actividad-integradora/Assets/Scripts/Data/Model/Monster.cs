@@ -1,48 +1,53 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public void OnEnable()
+    // Remove the bulletPrefab and bulletSpawnPoint variables
+    // public GameObject bulletPrefab;
+    // public Transform bulletSpawnPoint;
+    public int numberOfBullets = 10;
+    private void OnEnable()
     {
         TimeManager.OnMinuteChanged += TimeCheck;
     }
 
-    public void OnDisable()
+    private void OnDisable()
     {
         TimeManager.OnMinuteChanged -= TimeCheck;
     }
 
     private void TimeCheck()
     {
-    
-        //Start corrutine every 5 minutes
-        if((TimeManager.Minute%5) == 0)
-        {
-            //Coroutine is a function that can be paused and resumed
-            //Coroutine return a IEnumerator and need to use yield before return
-            //Async code
-            StartCoroutine(MoveMonster());
-        }
-        
+        StartCoroutine(SpawnBullets());
     }
 
-   private IEnumerator MoveMonster()
+    private IEnumerator SpawnBullets()
     {
-        transform.position = new Vector3(5f,3f,-6.3f);
-        Vector3 targetPos = new Vector3(-5f,3f,-6.3f);
+        // Spawn bullets for the specified time range (e.g., minutes 0 to 10)
+        while (TimeManager.Minute >= 0 && TimeManager.Minute < 10){
+            for (int i = 0; i < numberOfBullets; i++){
+                 // Use the object pool to get a bullet
+                GameObject bullet = BulletPool.Instance.GetBullet();
 
-        Vector3 currentPos = transform.position;
+                // Calculate position in a circle in the XZ plane
+                float angle = i * (360f / numberOfBullets);
+                Vector3 direction = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0f, Mathf.Sin(Mathf.Deg2Rad * angle));
+                
+                // Set the bullet's position and direction
+                bullet.transform.position = transform.position;
+                Bullet bulletScript = bullet.GetComponent<Bullet>();
+                if (bulletScript != null)
+                {
+                    bulletScript.SetMovementDirection(new Vector3(direction.x, direction.y, direction.z));
+                }
 
-        float timeElapsed = 0;
-        float timeToMove = 4;
+                // Activate the bullet
+                bullet.SetActive(true);
+            }
 
-        while(timeElapsed < timeToMove){
-            transform.position = Vector3.Lerp(currentPos,targetPos,timeElapsed/timeToMove);
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        } 
-
+            // Introduce a delay before spawning the next set of bullets
+            yield return new WaitForSeconds(.5f); // Adjust the delay as needed
+        }
     }
 }

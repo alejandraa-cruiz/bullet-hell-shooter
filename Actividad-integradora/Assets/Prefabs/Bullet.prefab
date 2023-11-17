@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9219165189266129429}
   - component: {fileID: 3790455479506462517}
   - component: {fileID: 9188422830841686638}
+  - component: {fileID: 1530914985798379579}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -118,3 +119,15 @@ Halo:
     serializedVersion: 2
     rgba: 4278245119
   m_Size: 0.3
+--- !u!114 &1530914985798379579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099976442673261120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abba1559c9488fe46ac2393de8976d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

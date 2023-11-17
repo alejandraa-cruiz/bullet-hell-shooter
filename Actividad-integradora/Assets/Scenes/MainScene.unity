@@ -12011,6 +12011,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7663851915200430956, guid: 957422f6d318e564ba5dd08d910df170, type: 3}
   m_PrefabInstance: {fileID: 8651968940445833142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1671068743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671068745}
+  - component: {fileID: 1671068744}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671068744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671068743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473fe400f319cfe429c7607c730b59b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4099976442673261120, guid: 957422f6d318e564ba5dd08d910df170, type: 3}
+  poolSize: 10
+--- !u!4 &1671068745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671068743}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.063367486, y: 4.2672887, z: -7.252905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672616735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16354,6 +16400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050a55662b5e7d94484b27c46ac96a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfBullets: 10
 --- !u!4 &7564204527867370328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7353642941092582508, guid: 52ff03c2800b502488e0bb6f2ed136e6, type: 3}
@@ -16564,6 +16611,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 2580174942442869254, guid: bc0c55d40672ea14a9745db77ddd31de, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1773712478736942664, guid: bc0c55d40672ea14a9745db77ddd31de, type: 3}
+    - target: {fileID: 2580174942442869254, guid: bc0c55d40672ea14a9745db77ddd31de, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 1733384262}
     - target: {fileID: 6209164906886047878, guid: bc0c55d40672ea14a9745db77ddd31de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -16688,3 +16743,4 @@ SceneRoots:
   - {fileID: 104425968}
   - {fileID: 828254528}
   - {fileID: 698819279}
+  - {fileID: 1671068745}
