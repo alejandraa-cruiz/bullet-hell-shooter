@@ -297,9 +297,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6209164906886047878}
   - component: {fileID: 2404202478010157647}
-  - component: {fileID: 2580174942442869254}
+  - component: {fileID: -1924565277830348524}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: PinkMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +343,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2580174942442869254
+--- !u!114 &-1924565277830348524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,11 +352,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1773712478736942664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050a55662b5e7d94484b27c46ac96a5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e5d69db12afa8b439b02f1c34cd7370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4099976442673261120, guid: 957422f6d318e564ba5dd08d910df170, type: 3}
-  bulletSpawnPoint: {fileID: 0}
+  numberOfBullets: 8
 --- !u!1 &1954906362401115533
 GameObject:
   m_ObjectHideFlags: 0
