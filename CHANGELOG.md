@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - LargeBullerPool and LargeBullet Prefab (17/11/2023)
 - Player character and PlayerController (17/11/2023)
 - Bullet Count UI Script and TMP (17/11/2023)
+- AudioSystem (17/11/2023)
 
 ### Changed
 
@@ -26,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Time TMP and TimeUI (17/11/2023)
 ### Fixed
 - Circle bullet pattern (17/11/2023)
+- ChestMonster bullet pattern (17/11/2023)
 ### Security
 
 ## [0.0.0] - 15/11/2023

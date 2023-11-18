@@ -57,7 +57,7 @@ public class PinkMonsterController : MonoBehaviour
     {
         float radius = 2f;
         float rotationSpeed = 30f;
-        // Spawn bullets for the specified time range (e.g., minutes 0 to 10)
+        // Spawn bullets for the specified time range (e.g., minutes 10 to 20)
         while (TimeManager.Minute >= 10 && TimeManager.Minute < 20){
             for (int i = 0; i < numberOfBullets; i++){
                  // Use the object pool to get a bullet
