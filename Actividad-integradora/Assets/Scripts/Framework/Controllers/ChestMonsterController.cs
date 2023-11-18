@@ -26,7 +26,7 @@ public class ChestMonsterController : MonoBehaviour
         float rotationSpeed = 30f; // Adjust the rotation speed as needed
 
         // Spawn bullets for the specified time range (e.g., minutes 20 to 30)
-        while (TimeManager.Minute >= 22 && TimeManager.Minute < 32)
+        while (TimeManager.Minute >= 32 && TimeManager.Minute < 47)
         {
             for (int i = 0; i < numberOfBullets; i++)
             {
